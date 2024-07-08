@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "dayjs": "^1.11.11"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@web/dev-server": "^0.4.6"
+  },
+  "scripts": {
+    "start": "wds --node-resolve --open --watch"
   }
 }
