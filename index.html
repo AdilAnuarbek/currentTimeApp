@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time App</title>
-</head>
-<body>
-    <div id="time"></div>
-    <div id="time-zone"></div>
     <script type="module" src="node_modules/dayjs/dayjs.min.js"></script>
     <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="time-div">
+        <div id="time-zone-div">
+            <div id="time-zone"></div>
+            <button data-micromodal-trigger="modal-1" id="time-zone-change">Change</button>
+        </div>
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+    <div id="modal-1" aria-hidden="true"> <!--MODAL TO CHANGE THE TIMEZONE-->
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+                <header>
+                    <h2 id="modal-1-title">
+                        Change Timezone
+                    </h2>
+                </header>
+                <div id="modal-1-content">
+                    <select name="modal__dropdown" id="modal-sel" class="modal__dropdown"> <!--DROPDOWN MENU TIMEZONE-->
+                        <option selected="selected">Pick a timezone</option>
+                    </select>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close>Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
